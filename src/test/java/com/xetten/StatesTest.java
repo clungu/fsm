@@ -28,6 +28,15 @@ public class StatesTest {
         assertEquals(s, FinalStates.Failed);
     }
 
+    @Test
+    public void testOnlyA() throws Exception {
+        assertEquals(validate(new Input("a")), FinalStates.Ok);
+    }
+
+    @Test
+    public void testOnlyBorC() throws Exception {
+        assertEquals(validate(new Input("bc")), FinalStates.Failed);
+    }
 
     /**
      * Runs the FSM until a FinalState is reached

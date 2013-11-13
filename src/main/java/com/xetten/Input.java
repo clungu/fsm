@@ -9,5 +9,5 @@ class Input {
     private String input;
     private int current;
     public Input(String input) {this.input = input;}
-    char read() { return current>=input.length() ? '\0' : input.charAt(current++); }
+    char read() { return current>=input.length() ? 0 : input.charAt(current++); }
 }
