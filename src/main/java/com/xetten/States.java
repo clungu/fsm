@@ -27,7 +27,7 @@ enum States implements State {
                 case 'a': return A;
                 case 'b': return B;
                 case 'c': return C;
-                case 0: return FinalStates.Ok;
+                case Input.END: return FinalStates.Ok;
                 default: return FinalStates.Failed;
             }
         }
@@ -38,7 +38,7 @@ enum States implements State {
             switch(word.read()) {
                 case 'b': return B;
                 case 'c': return C;
-                case 0: return FinalStates.Ok;
+                case Input.END: return FinalStates.Ok;
                 default: return FinalStates.Failed;
             }
         }
@@ -48,7 +48,7 @@ enum States implements State {
         public State next(Input word) {
             switch(word.read()) {
                 case 'c': return C;
-                case 0: return FinalStates.Ok;
+                case Input.END: return FinalStates.Ok;
                 default: return FinalStates.Failed;
             }
         }

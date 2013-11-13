@@ -6,8 +6,9 @@ package com.xetten;
  * Date: 11/13/13
  */
 class Input {
-    private String input;
+    public static final char END = 0;
+    private String data;
     private int current;
-    public Input(String input) {this.input = input;}
-    char read() { return current>=input.length() ? 0 : input.charAt(current++); }
+    public Input(String data) {this.data = data;}
+    char read() { return current>= data.length() ? END : data.charAt(current++); }
 }
